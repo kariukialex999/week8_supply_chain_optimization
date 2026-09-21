@@ -9,8 +9,10 @@ This project demonstrates end-to-end supply chain analytics including demand for
 ```
 week8_supply_chain_optimization/
 |-- week8_supply_chain_optimization.ipynb   # Main Jupyter notebook (Part A)
+|-- run_analysis.py                         # Python script to run full analysis
 |-- create_slide_deck.py                    # Script to generate PDF slides
-|-- slide_deck_content.md                   # Slide content in markdown format
+|-- Week8_Quarterly_Ops_Review.pdf          # Slide deck (Part B)
+|-- week8_supply_chain_optimization.mp4     # Video presentation (Part B)
 |-- hackathon2_reflection.md                # Hackathon #2 reflection (Part C)
 |-- requirements.txt                        # Python dependencies
 |-- README.md                               # This file
@@ -73,28 +75,45 @@ See `hackathon2_reflection.md` for the 200-word reflection on team performance.
 pip install -r requirements.txt
 ```
 
-### 2. Run the Jupyter Notebook
+### 2. Run Analysis (generates all outputs)
+
+```bash
+python run_analysis.py
+```
+
+### 3. Or run the Jupyter Notebook interactively
 
 ```bash
 jupyter notebook week8_supply_chain_optimization.ipynb
 ```
 
-### 3. Generate Slide Deck PDF
+### 4. Generate Slide Deck PDF
 
 ```bash
 python create_slide_deck.py
 ```
 
-This creates `Week8_Quarterly_Ops_Review.pdf` in the project directory.
-
 ## Key Results
 
 | Metric | Value |
 |--------|-------|
-| Forecast MAPE | ~7.6% |
-| Service Level (with SS) | ~97.8% |
-| Annual Savings | ~$864K |
-| Distribution Cost Reduction | 15% |
+| Forecast MAPE | 9.72% |
+| Service Level (with SS) | 100% |
+| Safety Stock | 692 units |
+| Reorder Point | 5,869 units |
+| Daily Distribution Cost | $8,015 |
+
+## Generated Outputs
+
+- `historical_demand_data.csv` - 730 days of synthetic demand data
+- `demand_analysis.png` - Trend and seasonality visualizations
+- `prophet_forecast.png` - Prophet model forecast
+- `prophet_components.png` - Trend, weekly, yearly components
+- `forecast_evaluation.png` - Actual vs predicted comparison
+- `inventory_simulation.png` - With/without safety stock simulation
+- `safety_stock_analysis.png` - Service level analysis
+- `distribution_optimization.png` - LP optimization heatmap
+- `optimization_summary.csv` - Key metrics summary
 
 ## Technologies Used
 
