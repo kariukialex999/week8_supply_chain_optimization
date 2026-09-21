@@ -1,0 +1,9 @@
+Metric,Value
+Forecast MAPE (%),9.72
+Forecast RMSE (units),90.95
+Avg Daily Demand (units),740.0
+Safety Stock (units),692.0
+Reorder Point (units),5869.0
+Service Level with SS (%),100.0
+Daily Distribution Cost ($),8015.0
+Cost per Unit ($),2.23
